@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const Task = () => {
     return (
         <View style = {styles.task}>
-            <Text> Task component</Text>
+            <View style = {styles.leftItem}>
+                <TouchableOpacity style = {styles.square}></TouchableOpacity>
+                <Text> Task component</Text>
+            </View>
+        <View style = {styles.circle}></View>
         </View>
     )
 }
@@ -21,6 +25,23 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginBottom: 20,     
         marginHorizontal:20  
+    },
+    leftItem:{
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    square:{
+        width: 20,
+        height: 20,
+        backgroundColor:"lightblue",
+        marginRight: 5,
+    },
+    circle:{
+        height: 20,
+        width: 20,
+        opacity:5,
+        borderRadius:20,
+        backgroundColor:"lightpink"
     }
 })
 
