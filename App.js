@@ -10,10 +10,11 @@ export default function App() {
       <Text style = {{ fontSize: 24}}>Today Tasks</Text>
       </View>
       <View>
-        <Task></Task>
-        <Task></Task>
-        <Task></Task>
-        <Task></Task>
+        <Task text = "Task 1"></Task>
+        <Task text = "Task 2"></Task>
+        <Task text = "Task 3"></Task>
+        <Task text = "Task 4"></Task>
+        <Task text = "Task 5"></Task>
       </View>
       <StatusBar style="auto" />
     </View>
