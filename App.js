@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, KeyboardAvoidingView, TouchableOpacity, Button } from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -14,8 +14,18 @@ export default function App() {
         <Task text = "Task 2"></Task>
         <Task text = "Task 3"></Task>
         <Task text = "Task 4"></Task>
-        <Task text = "Task 5"></Task>
       </View>
+      <KeyboardAvoidingView
+      style = {styles.addTaskWrapper}>
+        <TextInput
+        style = {styles.input}
+        placeholder = 'Add task ...'
+        ></TextInput>
+        <Button
+        title = 'Add'
+        color = 'blue'
+        ></Button>
+      </KeyboardAvoidingView>
       <StatusBar style="auto" />
     </View>
   );
@@ -31,7 +41,22 @@ const styles = StyleSheet.create({
      alignItems:"flex-start",
      justifyContent: "space-between",
      paddingTop: 50,
-     paddingLeft:20,
-     
-  }
+     paddingLeft:20, 
+  },
+  addTaskWrapper:{
+    position: 'absolute',
+    bottom: 70,
+    flexDirection:'row',
+    justifyContent:'space-around',
+    alignItems:'center',
+    width: "100%"
+  },
+  input:{
+    backgroundColor:'#EEEEEE',
+    width: '70%',
+    height: 100,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+  },
 });
